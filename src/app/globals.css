@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.footer{
+    @apply mt-16 flex flex-col items-center md:flex-row md:items-start bg-gray-800 p-8 rounded-lg;
+}
+.categories{
+    @apply grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 bg-gray-100 rounded-lg p-2 mb-4 text-sm;
+}
+.button-cart{
+    @apply flex gap-2 items-center ring-gray-500 ring-1 shadow-lg rounded-md px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all duration-300;
+}
