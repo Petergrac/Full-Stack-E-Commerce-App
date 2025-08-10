@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
-.footer{
-    @apply mt-16 flex flex-col items-center md:flex-row md:items-start bg-gray-800 p-8 rounded-lg;
+.footer {
+  @apply mt-16 flex flex-col items-center md:flex-row md:items-start bg-gray-800 p-8 rounded-lg;
 }
-.categories{
-    @apply grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 bg-gray-100 rounded-lg p-2 mb-4 text-sm;
+.categories {
+  @apply grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 bg-gray-100 rounded-lg p-2 mb-4 text-sm;
 }
-.button-cart{
-    @apply flex gap-2 items-center ring-gray-500 ring-1 shadow-lg rounded-md px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all duration-300;
+.button-cart {
+  @apply flex gap-2 items-center ring-gray-500 ring-1 shadow-lg rounded-md px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all duration-300;
+}
+.shoppingItems {
+  @apply absolute -top-3 -right-3 bg-amber-400 text-gray-600 w-4 h-4 rounded-full flex items-center justify-center text-sm font-medium;
+}
+.detail-button {
+  @apply w-full bg-gray-800 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center hover:bg-gray-900 transition-all duration-500;
+}
+.cart-delete-button{
+    @apply w-8 h-8 rounded-full bg-red-100 hover:bg-red-200 transition-all duration-300 text-red-400 flex items-center justify-center cursor-pointer;
 }

@@ -62,7 +62,6 @@ const Categories = () => {
   const router = useRouter();
   // Use it to get the urlpath
   const pathName = usePathname();
-  console.log(pathName)
   const selectedCategory = searchParams.get("category");
 
   const handleChange = (slug: string | null) => {
