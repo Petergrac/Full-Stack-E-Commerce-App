@@ -129,7 +129,7 @@ const ProductPage = async ({
   params,
 }: {
   searchParams: Promise<{ color: string; size: string }>;
-  params: { id: number };
+  params: Promise<{ id: number }>;
 }) => {
   const { id } = await params;
   const { size, color } = await searchParams;

@@ -15,7 +15,7 @@ const PaymentForm = () => {
     resolver: zodResolver(paymentFormSchema),
   });
 
-  const handlePaymentForm: SubmitHandler<paymentFormInputs> = (data) => {};
+  const handlePaymentForm: SubmitHandler<paymentFormInputs> = () => {};
   return (
     <form
       action=""
