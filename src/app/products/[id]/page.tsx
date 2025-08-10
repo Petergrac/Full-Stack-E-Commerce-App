@@ -116,12 +116,13 @@ const products: ProductsType[] = [
 export const generateMetadata = async ({
   params,
 }: {
-  params: { id: number };
+  params: Promise<{ id: number }>;
 }) => {
   // TODO get product from db
+  const { id } = await params;
   return {
-    title: products[params.id - 1].name,
-    description: products[params.id - 1].description,
+    title: products[id - 1].name,
+    description: products[id - 1].description,
   };
 };
 const ProductPage = async ({
@@ -132,6 +133,7 @@ const ProductPage = async ({
   params: Promise<{ id: number }>;
 }) => {
   const { id } = await params;
+  console.log(id);
   const { size, color } = await searchParams;
   const selectedSize = size || (products[id - 1].sizes[0] as string);
   const selectedColor = color || (products[id - 1].colors[0] as string);
@@ -149,12 +151,8 @@ const ProductPage = async ({
 
       {/* DETAILS */}
       <div className="w-full h-7/12 flex flex-col gap-4">
-        <h1 className="text-2xl font-medium">
-          {products[id - 1].name}
-        </h1>
-        <p className="text-gray-500">
-          {products[id - 1].description}
-        </p>
+        <h1 className="text-2xl font-medium">{products[id - 1].name}</h1>
+        <p className="text-gray-500">{products[id - 1].description}</p>
         <h2 className="text-2xl font-semibold">
           $ {products[id - 1].price.toFixed(2)}
         </h2>
