@@ -156,13 +156,13 @@ const CartPage = () => {
           </div>
           {activeStep === 1 ? (
             <button
-              onClick={() => router.push(`/cart/?step=2`, { scroll: false })}
+              onClick={() => router.replace(`?step=2`, { scroll: false })}
               className={`detail-button ${
                 cart.length === 0
                   ? "text-gray-500 bg-gray-200"
                   : " hover:bg-gray-900  bg-gray-800 text-white"
               }`}
-              disabled={cart.length === 0}
+              disabled={(cart.length === 0)? true : false}
             >
               Continue <ArrowRight className="w-4 h-4" />
             </button>
